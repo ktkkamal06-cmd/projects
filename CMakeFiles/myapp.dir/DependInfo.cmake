@@ -8,7 +8,10 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/workspaces/projects/BudgetCalculator.cpp" "CMakeFiles/myapp.dir/BudgetCalculator.cpp.o" "gcc" "CMakeFiles/myapp.dir/BudgetCalculator.cpp.o.d"
+  "/workspaces/projects/Database.cpp" "CMakeFiles/myapp.dir/Database.cpp.o" "gcc" "CMakeFiles/myapp.dir/Database.cpp.o.d"
   "/workspaces/projects/main.cpp" "CMakeFiles/myapp.dir/main.cpp.o" "gcc" "CMakeFiles/myapp.dir/main.cpp.o.d"
+  "/workspaces/projects/venue.cpp" "CMakeFiles/myapp.dir/venue.cpp.o" "gcc" "CMakeFiles/myapp.dir/venue.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

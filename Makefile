@@ -129,6 +129,54 @@ myapp/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/build
 .PHONY : myapp/fast
 
+BudgetCalculator.o: BudgetCalculator.cpp.o
+.PHONY : BudgetCalculator.o
+
+# target to build an object file
+BudgetCalculator.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/BudgetCalculator.cpp.o
+.PHONY : BudgetCalculator.cpp.o
+
+BudgetCalculator.i: BudgetCalculator.cpp.i
+.PHONY : BudgetCalculator.i
+
+# target to preprocess a source file
+BudgetCalculator.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/BudgetCalculator.cpp.i
+.PHONY : BudgetCalculator.cpp.i
+
+BudgetCalculator.s: BudgetCalculator.cpp.s
+.PHONY : BudgetCalculator.s
+
+# target to generate assembly for a file
+BudgetCalculator.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/BudgetCalculator.cpp.s
+.PHONY : BudgetCalculator.cpp.s
+
+Database.o: Database.cpp.o
+.PHONY : Database.o
+
+# target to build an object file
+Database.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/Database.cpp.o
+.PHONY : Database.cpp.o
+
+Database.i: Database.cpp.i
+.PHONY : Database.i
+
+# target to preprocess a source file
+Database.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/Database.cpp.i
+.PHONY : Database.cpp.i
+
+Database.s: Database.cpp.s
+.PHONY : Database.s
+
+# target to generate assembly for a file
+Database.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/Database.cpp.s
+.PHONY : Database.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -153,6 +201,30 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+venue.o: venue.cpp.o
+.PHONY : venue.o
+
+# target to build an object file
+venue.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/venue.cpp.o
+.PHONY : venue.cpp.o
+
+venue.i: venue.cpp.i
+.PHONY : venue.i
+
+# target to preprocess a source file
+venue.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/venue.cpp.i
+.PHONY : venue.cpp.i
+
+venue.s: venue.cpp.s
+.PHONY : venue.s
+
+# target to generate assembly for a file
+venue.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/venue.cpp.s
+.PHONY : venue.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -162,9 +234,18 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... myapp"
+	@echo "... BudgetCalculator.o"
+	@echo "... BudgetCalculator.i"
+	@echo "... BudgetCalculator.s"
+	@echo "... Database.o"
+	@echo "... Database.i"
+	@echo "... Database.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... venue.o"
+	@echo "... venue.i"
+	@echo "... venue.s"
 .PHONY : help
 
 

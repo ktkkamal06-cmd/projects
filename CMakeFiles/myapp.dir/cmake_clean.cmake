@@ -1,6 +1,12 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/myapp.dir/BudgetCalculator.cpp.o"
+  "CMakeFiles/myapp.dir/BudgetCalculator.cpp.o.d"
+  "CMakeFiles/myapp.dir/Database.cpp.o"
+  "CMakeFiles/myapp.dir/Database.cpp.o.d"
   "CMakeFiles/myapp.dir/main.cpp.o"
   "CMakeFiles/myapp.dir/main.cpp.o.d"
+  "CMakeFiles/myapp.dir/venue.cpp.o"
+  "CMakeFiles/myapp.dir/venue.cpp.o.d"
   "myapp"
   "myapp.pdb"
 )

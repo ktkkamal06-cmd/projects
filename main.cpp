@@ -1,31 +1,49 @@
 // main.cpp
-// Author: Kamal K. | Roll No: ce24btech11030
-#include <mysql_driver.h>
-#include <mysql_connection.h>
-#include <cppconn/statement.h>
-#include <cppconn/exception.h>
+// Author: G. Akhil | Roll No: ce24btech11026
+#include "Database.h"
+#include "Venue.h"
+#include "BudgetCalculator.h"
 #include <iostream>
-#include <memory>
+#include <limits>
+
+
 
 int main() {
-    try {
-        // 1. Initialize the driver
-        sql::mysql::MySQL_Driver* driver = sql::mysql::get_mysql_driver_instance();
+    std::cout << "Booting Event Management System...\n";
+    Database::getInstance()->initializeTables();
 
-        // 2. Connect to the local Codespaces database
-        std::unique_ptr<sql::Connection> conn(driver->connect("tcp://127.0.0.1:3306", "root", "password"));
-        std::unique_ptr<sql::Statement> stmt(conn->createStatement());
+    int choice = 0;
+    while (choice != 13) {
+        std::cout << "\n=== MASTER MENU ===\n";
+        std::cout << "6. Venue Management\n";
+        std::cout << "11. Legacy Budget Calculator\n";
+        std::cout << "13. Exit\n";
+        std::cout << "Select an option: ";
+        std::cin >> choice;
 
-        // 3. Build and populate the schema
-        stmt->execute("CREATE DATABASE IF NOT EXISTS EventLogistics");
-        stmt->execute("USE EventLogistics");
-        stmt->execute("CREATE TABLE IF NOT EXISTS Events (event_id INT AUTO_INCREMENT PRIMARY KEY, event_name VARCHAR(100), expected_capacity INT)");
-        stmt->execute("INSERT INTO Events (event_name, expected_capacity) VALUES ('Prom Night', 2500)");
+        if (std::cin.fail()) {
+            std::cin.clear(); std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+            continue;
+        }
 
-        std::cout << "Project is working! Event successfully logged in the database." << std::endl;
-        
-    } catch (sql::SQLException &e) {
-        std::cout << "ERROR: " << e.what() << std::endl;
+        switch (choice) {
+            case 6: {
+                int venueChoice = 0;
+                std::cout << "\n-- Venue Management --\n1. Add Venue\n2. View Venues\nSelect: ";
+                std::cin >> venueChoice;
+                if (venueChoice == 1) Venue::addVenue();
+                else if (venueChoice == 2) Venue::viewAllVenues();
+                break;
+            }
+            case 11:
+                BudgetCalculator::runCalculator();
+                break;
+            case 13:
+                std::cout << "Shutting down system...\n";
+                break;
+            default:
+                std::cout << "Feature in development. Please select a valid option.\n";
+        }
     }
     return 0;
 }
