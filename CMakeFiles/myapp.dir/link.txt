@@ -1,1 +1,1 @@
-/usr/bin/c++ CMakeFiles/myapp.dir/main.cpp.o CMakeFiles/myapp.dir/Database.cpp.o CMakeFiles/myapp.dir/venue.cpp.o CMakeFiles/myapp.dir/BudgetCalculator.cpp.o -o myapp  -lmysqlcppconn 
+/usr/bin/c++ CMakeFiles/myapp.dir/main.cpp.o CMakeFiles/myapp.dir/Database.cpp.o CMakeFiles/myapp.dir/venue.cpp.o CMakeFiles/myapp.dir/BudgetCalculator.cpp.o CMakeFiles/myapp.dir/Vendor.cpp.o CMakeFiles/myapp.dir/Equipment.cpp.o CMakeFiles/myapp.dir/Staff.cpp.o CMakeFiles/myapp.dir/Event.cpp.o -o myapp  -lmysqlcppconn 

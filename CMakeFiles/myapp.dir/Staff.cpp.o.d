@@ -1,6 +1,7 @@
-CMakeFiles/myapp.dir/main.cpp.o: /workspaces/projects/main.cpp \
- /usr/include/stdc-predef.h /workspaces/projects/Database.h \
- /usr/include/mysql_driver.h /usr/include/boost/scoped_ptr.hpp \
+CMakeFiles/myapp.dir/Staff.cpp.o: /workspaces/projects/Staff.cpp \
+ /usr/include/stdc-predef.h /workspaces/projects/Staff.h \
+ /workspaces/projects/Database.h /usr/include/mysql_driver.h \
+ /usr/include/boost/scoped_ptr.hpp \
  /usr/include/boost/smart_ptr/scoped_ptr.hpp \
  /usr/include/boost/smart_ptr/detail/requires_cxx11.hpp \
  /usr/include/boost/config.hpp /usr/include/boost/config/user.hpp \
@@ -253,7 +254,18 @@ CMakeFiles/myapp.dir/main.cpp.o: /workspaces/projects/main.cpp \
  /usr/include/boost/core/detail/sp_thread_sleep.hpp \
  /usr/include/boost/smart_ptr/detail/local_sp_deleter.hpp \
  /usr/include/boost/smart_ptr/detail/local_counted_base.hpp \
- /workspaces/projects/Venue.h /workspaces/projects/Vendor.h \
- /workspaces/projects/Equipment.h /workspaces/projects/Staff.h \
- /workspaces/projects/BudgetCalculator.h /workspaces/projects/Event.h \
- /usr/include/c++/13/limits
+ /usr/include/cppconn/prepared_statement.h \
+ /usr/include/cppconn/statement.h /usr/include/cppconn/config.h \
+ /usr/include/inttypes.h /usr/include/cppconn/resultset.h \
+ /usr/include/cppconn/resultset_metadata.h \
+ /usr/include/cppconn/datatype.h /usr/include/cppconn/resultset.h \
+ /usr/include/c++/13/limits /usr/include/c++/13/iomanip \
+ /usr/include/c++/13/locale \
+ /usr/include/c++/13/bits/locale_facets_nonio.h /usr/include/c++/13/ctime \
+ /usr/include/x86_64-linux-gnu/c++/13/bits/time_members.h \
+ /usr/include/x86_64-linux-gnu/c++/13/bits/messages_members.h \
+ /usr/include/libintl.h /usr/include/c++/13/bits/codecvt.h \
+ /usr/include/c++/13/bits/locale_facets_nonio.tcc \
+ /usr/include/c++/13/bits/locale_conv.h \
+ /usr/include/c++/13/bits/quoted_string.h /usr/include/c++/13/sstream \
+ /usr/include/c++/13/bits/sstream.tcc

@@ -125,12 +125,72 @@ CMakeFiles/myapp.dir/BudgetCalculator.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/myapp.dir/BudgetCalculator.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspaces/projects/BudgetCalculator.cpp -o CMakeFiles/myapp.dir/BudgetCalculator.cpp.s
 
+CMakeFiles/myapp.dir/Vendor.cpp.o: CMakeFiles/myapp.dir/flags.make
+CMakeFiles/myapp.dir/Vendor.cpp.o: Vendor.cpp
+CMakeFiles/myapp.dir/Vendor.cpp.o: CMakeFiles/myapp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/workspaces/projects/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/myapp.dir/Vendor.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/myapp.dir/Vendor.cpp.o -MF CMakeFiles/myapp.dir/Vendor.cpp.o.d -o CMakeFiles/myapp.dir/Vendor.cpp.o -c /workspaces/projects/Vendor.cpp
+
+CMakeFiles/myapp.dir/Vendor.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/myapp.dir/Vendor.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspaces/projects/Vendor.cpp > CMakeFiles/myapp.dir/Vendor.cpp.i
+
+CMakeFiles/myapp.dir/Vendor.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/myapp.dir/Vendor.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspaces/projects/Vendor.cpp -o CMakeFiles/myapp.dir/Vendor.cpp.s
+
+CMakeFiles/myapp.dir/Equipment.cpp.o: CMakeFiles/myapp.dir/flags.make
+CMakeFiles/myapp.dir/Equipment.cpp.o: Equipment.cpp
+CMakeFiles/myapp.dir/Equipment.cpp.o: CMakeFiles/myapp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/workspaces/projects/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/myapp.dir/Equipment.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/myapp.dir/Equipment.cpp.o -MF CMakeFiles/myapp.dir/Equipment.cpp.o.d -o CMakeFiles/myapp.dir/Equipment.cpp.o -c /workspaces/projects/Equipment.cpp
+
+CMakeFiles/myapp.dir/Equipment.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/myapp.dir/Equipment.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspaces/projects/Equipment.cpp > CMakeFiles/myapp.dir/Equipment.cpp.i
+
+CMakeFiles/myapp.dir/Equipment.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/myapp.dir/Equipment.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspaces/projects/Equipment.cpp -o CMakeFiles/myapp.dir/Equipment.cpp.s
+
+CMakeFiles/myapp.dir/Staff.cpp.o: CMakeFiles/myapp.dir/flags.make
+CMakeFiles/myapp.dir/Staff.cpp.o: Staff.cpp
+CMakeFiles/myapp.dir/Staff.cpp.o: CMakeFiles/myapp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/workspaces/projects/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/myapp.dir/Staff.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/myapp.dir/Staff.cpp.o -MF CMakeFiles/myapp.dir/Staff.cpp.o.d -o CMakeFiles/myapp.dir/Staff.cpp.o -c /workspaces/projects/Staff.cpp
+
+CMakeFiles/myapp.dir/Staff.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/myapp.dir/Staff.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspaces/projects/Staff.cpp > CMakeFiles/myapp.dir/Staff.cpp.i
+
+CMakeFiles/myapp.dir/Staff.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/myapp.dir/Staff.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspaces/projects/Staff.cpp -o CMakeFiles/myapp.dir/Staff.cpp.s
+
+CMakeFiles/myapp.dir/Event.cpp.o: CMakeFiles/myapp.dir/flags.make
+CMakeFiles/myapp.dir/Event.cpp.o: Event.cpp
+CMakeFiles/myapp.dir/Event.cpp.o: CMakeFiles/myapp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/workspaces/projects/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/myapp.dir/Event.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/myapp.dir/Event.cpp.o -MF CMakeFiles/myapp.dir/Event.cpp.o.d -o CMakeFiles/myapp.dir/Event.cpp.o -c /workspaces/projects/Event.cpp
+
+CMakeFiles/myapp.dir/Event.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/myapp.dir/Event.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspaces/projects/Event.cpp > CMakeFiles/myapp.dir/Event.cpp.i
+
+CMakeFiles/myapp.dir/Event.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/myapp.dir/Event.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspaces/projects/Event.cpp -o CMakeFiles/myapp.dir/Event.cpp.s
+
 # Object files for target myapp
 myapp_OBJECTS = \
 "CMakeFiles/myapp.dir/main.cpp.o" \
 "CMakeFiles/myapp.dir/Database.cpp.o" \
 "CMakeFiles/myapp.dir/venue.cpp.o" \
-"CMakeFiles/myapp.dir/BudgetCalculator.cpp.o"
+"CMakeFiles/myapp.dir/BudgetCalculator.cpp.o" \
+"CMakeFiles/myapp.dir/Vendor.cpp.o" \
+"CMakeFiles/myapp.dir/Equipment.cpp.o" \
+"CMakeFiles/myapp.dir/Staff.cpp.o" \
+"CMakeFiles/myapp.dir/Event.cpp.o"
 
 # External object files for target myapp
 myapp_EXTERNAL_OBJECTS =
@@ -139,9 +199,13 @@ myapp: CMakeFiles/myapp.dir/main.cpp.o
 myapp: CMakeFiles/myapp.dir/Database.cpp.o
 myapp: CMakeFiles/myapp.dir/venue.cpp.o
 myapp: CMakeFiles/myapp.dir/BudgetCalculator.cpp.o
+myapp: CMakeFiles/myapp.dir/Vendor.cpp.o
+myapp: CMakeFiles/myapp.dir/Equipment.cpp.o
+myapp: CMakeFiles/myapp.dir/Staff.cpp.o
+myapp: CMakeFiles/myapp.dir/Event.cpp.o
 myapp: CMakeFiles/myapp.dir/build.make
 myapp: CMakeFiles/myapp.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/workspaces/projects/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable myapp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/workspaces/projects/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable myapp"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/myapp.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

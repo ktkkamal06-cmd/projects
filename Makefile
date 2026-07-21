@@ -177,6 +177,102 @@ Database.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/Database.cpp.s
 .PHONY : Database.cpp.s
 
+Equipment.o: Equipment.cpp.o
+.PHONY : Equipment.o
+
+# target to build an object file
+Equipment.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/Equipment.cpp.o
+.PHONY : Equipment.cpp.o
+
+Equipment.i: Equipment.cpp.i
+.PHONY : Equipment.i
+
+# target to preprocess a source file
+Equipment.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/Equipment.cpp.i
+.PHONY : Equipment.cpp.i
+
+Equipment.s: Equipment.cpp.s
+.PHONY : Equipment.s
+
+# target to generate assembly for a file
+Equipment.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/Equipment.cpp.s
+.PHONY : Equipment.cpp.s
+
+Event.o: Event.cpp.o
+.PHONY : Event.o
+
+# target to build an object file
+Event.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/Event.cpp.o
+.PHONY : Event.cpp.o
+
+Event.i: Event.cpp.i
+.PHONY : Event.i
+
+# target to preprocess a source file
+Event.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/Event.cpp.i
+.PHONY : Event.cpp.i
+
+Event.s: Event.cpp.s
+.PHONY : Event.s
+
+# target to generate assembly for a file
+Event.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/Event.cpp.s
+.PHONY : Event.cpp.s
+
+Staff.o: Staff.cpp.o
+.PHONY : Staff.o
+
+# target to build an object file
+Staff.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/Staff.cpp.o
+.PHONY : Staff.cpp.o
+
+Staff.i: Staff.cpp.i
+.PHONY : Staff.i
+
+# target to preprocess a source file
+Staff.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/Staff.cpp.i
+.PHONY : Staff.cpp.i
+
+Staff.s: Staff.cpp.s
+.PHONY : Staff.s
+
+# target to generate assembly for a file
+Staff.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/Staff.cpp.s
+.PHONY : Staff.cpp.s
+
+Vendor.o: Vendor.cpp.o
+.PHONY : Vendor.o
+
+# target to build an object file
+Vendor.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/Vendor.cpp.o
+.PHONY : Vendor.cpp.o
+
+Vendor.i: Vendor.cpp.i
+.PHONY : Vendor.i
+
+# target to preprocess a source file
+Vendor.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/Vendor.cpp.i
+.PHONY : Vendor.cpp.i
+
+Vendor.s: Vendor.cpp.s
+.PHONY : Vendor.s
+
+# target to generate assembly for a file
+Vendor.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/Vendor.cpp.s
+.PHONY : Vendor.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -240,6 +336,18 @@ help:
 	@echo "... Database.o"
 	@echo "... Database.i"
 	@echo "... Database.s"
+	@echo "... Equipment.o"
+	@echo "... Equipment.i"
+	@echo "... Equipment.s"
+	@echo "... Event.o"
+	@echo "... Event.i"
+	@echo "... Event.s"
+	@echo "... Staff.o"
+	@echo "... Staff.i"
+	@echo "... Staff.s"
+	@echo "... Vendor.o"
+	@echo "... Vendor.i"
+	@echo "... Vendor.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
