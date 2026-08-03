@@ -31,6 +31,27 @@ void Event::createEvent() {
 
     try {
         sql::Connection* conn = Database::getInstance()->getConnection();
+
+        // --- PHASE 3: SMART ALGORITHM (VENUE CONFLICT DETECTION) ---
+        // 1. Ask the database if this Venue ID is already booked on this exact date
+        std::unique_ptr<sql::PreparedStatement> checkStmt(conn->prepareStatement(
+            "SELECT event_name FROM Events WHERE venue_id = ? AND event_date = ?"
+        ));
+        checkStmt->setInt(1, venueId);
+        checkStmt->setString(2, date);
+        std::unique_ptr<sql::ResultSet> res(checkStmt->executeQuery());
+
+        // 2. If we get a result back, it means a conflict exists!
+        if (res->next()) {
+            std::string existingEvent = res->getString("event_name");
+            std::cout << "\n[!] ERROR: Venue Double-Booking Detected!\n";
+            std::cout << "The selected venue is already booked on " << date 
+                      << " for another event ('" << existingEvent << "').\n";
+            return; // Kick them out before the event is created
+        }
+        // -----------------------------------------------------------
+
+        // 3. If the code makes it here, the date is clear!
         std::unique_ptr<sql::PreparedStatement> pstmt(conn->prepareStatement(
             "INSERT INTO Events (event_name, event_date, event_time, venue_id, expected_capacity, budget_limit) "
             "VALUES (?, ?, ?, ?, ?, ?)"
@@ -45,7 +66,6 @@ void Event::createEvent() {
 
         std::cout << "\nSuccess! Event '" << name << "' created and linked to Venue ID " << venueId << ".\n";
     } catch (sql::SQLException &e) {
-        // If you enter a Venue ID that doesn't exist, MySQL's foreign key will block it and throw an error here!
         std::cout << "\nERROR: Could not create event. " << e.what() << std::endl;
         std::cout << "(Hint: Did you enter a Venue ID that hasn't been created yet?)\n";
     }

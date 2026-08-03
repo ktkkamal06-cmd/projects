@@ -7,6 +7,8 @@
 #include "Staff.h"
 #include "BudgetCalculator.h"
 #include "Event.h"
+#include "Booking.h"
+#include "Analytics.h"
 #include <iostream>
 #include <limits>
 
@@ -19,6 +21,8 @@ int main() {
         std::cout << "\n=== MASTER MENU ===\n";
         std::cout << "1. Create Event\n";
         std::cout << "2. View Events\n";
+        std::cout << "3. Manage Event Bookings\n";
+        std::cout << "4. Financial Analytics Dashboard\n";
         std::cout << "6. Venue Management\n";
         std::cout << "7. Vendor Management\n";
         std::cout << "8. Equipment Management\n";
@@ -40,6 +44,25 @@ int main() {
             case 2:
                 Event::viewAllEvents();
                 break;
+            case 3: {
+                int sub = 0; 
+                std::cout << "\n1. Book Vendor\n2. Book Equipment\n3. Assign Staff\nSelect: "; 
+                std::cin >> sub;
+                if (sub == 1) Booking::bookVendor(); 
+                else if (sub == 2) Booking::bookEquipment();
+                else if (sub == 3) Booking::assignStaff();
+                break;
+            }
+            
+            case 4: {
+                int sub = 0; 
+                std::cout << "\n1. Record Event Revenue\n2. Generate Financial Report\nSelect: "; 
+                std::cin >> sub;
+                if (sub == 1) Analytics::recordRevenue(); 
+                else if (sub == 2) Analytics::generateFinancialReport();
+                break;
+            }
+
             case 6: {
                 int sub = 0; std::cout << "\n1. Add Venue\n2. View Venues\nSelect: "; std::cin >> sub;
                 if (sub == 1) Venue::addVenue(); else if (sub == 2) Venue::viewAllVenues();

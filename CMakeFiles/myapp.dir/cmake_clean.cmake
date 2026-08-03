@@ -1,4 +1,8 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/myapp.dir/Analytics.cpp.o"
+  "CMakeFiles/myapp.dir/Analytics.cpp.o.d"
+  "CMakeFiles/myapp.dir/Booking.cpp.o"
+  "CMakeFiles/myapp.dir/Booking.cpp.o.d"
   "CMakeFiles/myapp.dir/BudgetCalculator.cpp.o"
   "CMakeFiles/myapp.dir/BudgetCalculator.cpp.o.d"
   "CMakeFiles/myapp.dir/Database.cpp.o"

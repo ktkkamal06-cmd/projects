@@ -1,6 +1,7 @@
-CMakeFiles/myapp.dir/main.cpp.o: /workspaces/projects/main.cpp \
- /usr/include/stdc-predef.h /workspaces/projects/Database.h \
- /usr/include/mysql_driver.h /usr/include/boost/scoped_ptr.hpp \
+CMakeFiles/myapp.dir/Booking.cpp.o: /workspaces/projects/Booking.cpp \
+ /usr/include/stdc-predef.h /workspaces/projects/Booking.h \
+ /workspaces/projects/Database.h /usr/include/mysql_driver.h \
+ /usr/include/boost/scoped_ptr.hpp \
  /usr/include/boost/smart_ptr/scoped_ptr.hpp \
  /usr/include/boost/smart_ptr/detail/requires_cxx11.hpp \
  /usr/include/boost/config.hpp /usr/include/boost/config/user.hpp \
@@ -253,8 +254,8 @@ CMakeFiles/myapp.dir/main.cpp.o: /workspaces/projects/main.cpp \
  /usr/include/boost/core/detail/sp_thread_sleep.hpp \
  /usr/include/boost/smart_ptr/detail/local_sp_deleter.hpp \
  /usr/include/boost/smart_ptr/detail/local_counted_base.hpp \
- /workspaces/projects/Venue.h /workspaces/projects/Vendor.h \
- /workspaces/projects/Equipment.h /workspaces/projects/Staff.h \
- /workspaces/projects/BudgetCalculator.h /workspaces/projects/Event.h \
- /workspaces/projects/Booking.h /workspaces/projects/Analytics.h \
- /usr/include/c++/13/limits
+ /usr/include/cppconn/prepared_statement.h \
+ /usr/include/cppconn/statement.h /usr/include/cppconn/config.h \
+ /usr/include/inttypes.h /usr/include/cppconn/resultset.h \
+ /usr/include/cppconn/resultset_metadata.h \
+ /usr/include/cppconn/datatype.h

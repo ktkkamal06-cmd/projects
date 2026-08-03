@@ -8,6 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/workspaces/projects/Analytics.cpp" "CMakeFiles/myapp.dir/Analytics.cpp.o" "gcc" "CMakeFiles/myapp.dir/Analytics.cpp.o.d"
+  "/workspaces/projects/Booking.cpp" "CMakeFiles/myapp.dir/Booking.cpp.o" "gcc" "CMakeFiles/myapp.dir/Booking.cpp.o.d"
   "/workspaces/projects/BudgetCalculator.cpp" "CMakeFiles/myapp.dir/BudgetCalculator.cpp.o" "gcc" "CMakeFiles/myapp.dir/BudgetCalculator.cpp.o.d"
   "/workspaces/projects/Database.cpp" "CMakeFiles/myapp.dir/Database.cpp.o" "gcc" "CMakeFiles/myapp.dir/Database.cpp.o.d"
   "/workspaces/projects/Equipment.cpp" "CMakeFiles/myapp.dir/Equipment.cpp.o" "gcc" "CMakeFiles/myapp.dir/Equipment.cpp.o.d"

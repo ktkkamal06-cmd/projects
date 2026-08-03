@@ -129,6 +129,54 @@ myapp/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/build
 .PHONY : myapp/fast
 
+Analytics.o: Analytics.cpp.o
+.PHONY : Analytics.o
+
+# target to build an object file
+Analytics.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/Analytics.cpp.o
+.PHONY : Analytics.cpp.o
+
+Analytics.i: Analytics.cpp.i
+.PHONY : Analytics.i
+
+# target to preprocess a source file
+Analytics.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/Analytics.cpp.i
+.PHONY : Analytics.cpp.i
+
+Analytics.s: Analytics.cpp.s
+.PHONY : Analytics.s
+
+# target to generate assembly for a file
+Analytics.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/Analytics.cpp.s
+.PHONY : Analytics.cpp.s
+
+Booking.o: Booking.cpp.o
+.PHONY : Booking.o
+
+# target to build an object file
+Booking.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/Booking.cpp.o
+.PHONY : Booking.cpp.o
+
+Booking.i: Booking.cpp.i
+.PHONY : Booking.i
+
+# target to preprocess a source file
+Booking.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/Booking.cpp.i
+.PHONY : Booking.cpp.i
+
+Booking.s: Booking.cpp.s
+.PHONY : Booking.s
+
+# target to generate assembly for a file
+Booking.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/Booking.cpp.s
+.PHONY : Booking.cpp.s
+
 BudgetCalculator.o: BudgetCalculator.cpp.o
 .PHONY : BudgetCalculator.o
 
@@ -330,6 +378,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... myapp"
+	@echo "... Analytics.o"
+	@echo "... Analytics.i"
+	@echo "... Analytics.s"
+	@echo "... Booking.o"
+	@echo "... Booking.i"
+	@echo "... Booking.s"
 	@echo "... BudgetCalculator.o"
 	@echo "... BudgetCalculator.i"
 	@echo "... BudgetCalculator.s"

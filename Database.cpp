@@ -54,6 +54,19 @@ void Database::initializeTables() {
                       "revenue DECIMAL(12,2) DEFAULT 0, "
                       "profit DECIMAL(12,2) DEFAULT 0, "
                       "FOREIGN KEY(venue_id) REFERENCES Venues(venue_id))");
+                      // --- THE GLUE (JUNCTION TABLES) ---
+        stmt->execute("CREATE TABLE IF NOT EXISTS EventVendors (event_id INT, vendor_id INT, "
+                      "FOREIGN KEY(event_id) REFERENCES Events(event_id), "
+                      "FOREIGN KEY(vendor_id) REFERENCES Vendors(vendor_id))");
+
+        stmt->execute("CREATE TABLE IF NOT EXISTS EventEquipment (event_id INT, equipment_id INT, quantity INT, "
+                      "FOREIGN KEY(event_id) REFERENCES Events(event_id), "
+                      "FOREIGN KEY(equipment_id) REFERENCES Equipment(equipment_id))");
+
+        stmt->execute("CREATE TABLE IF NOT EXISTS EventStaff (event_id INT, staff_id INT, "
+                      "FOREIGN KEY(event_id) REFERENCES Events(event_id), "
+                      "FOREIGN KEY(staff_id) REFERENCES Staff(staff_id))");
+
     } catch (sql::SQLException &e) {
         std::cout << "Table Init Error: " << e.what() << std::endl;
     }
