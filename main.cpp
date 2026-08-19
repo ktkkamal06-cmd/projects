@@ -1,97 +1,61 @@
-// main.cpp
-// Author: Kamal K. | Roll No: ce24btech11030
+#include "crow.h"
 #include "Database.h"
-#include "Venue.h"
-#include "Vendor.h"
-#include "Equipment.h"
-#include "Staff.h"
-#include "BudgetCalculator.h"
-#include "Event.h"
-#include "Booking.h"
-#include "Analytics.h"
-#include <iostream>
-#include <limits>
+#include <fstream>
+#include <cppconn/prepared_statement.h>
+#include <cppconn/resultset.h>
 
 int main() {
-    std::cout << "Booting Event Management System...\n";
-    Database::getInstance()->initializeTables();
+    // 1. Boot up the Crow Web App
+    crow::SimpleApp app;
 
-    int choice = 0;
-    while (choice != 13) {
-        std::cout << "\n=== MASTER MENU ===\n";
-        std::cout << "1. Create Event\n";
-        std::cout << "2. View Events\n";
-        std::cout << "3. Manage Event Bookings\n";
-        std::cout << "4. Financial Analytics Dashboard\n";
-        std::cout << "6. Venue Management\n";
-        std::cout << "7. Vendor Management\n";
-        std::cout << "8. Equipment Management\n";
-        std::cout << "9. Staff Management\n";
-        std::cout << "11. Legacy Budget Calculator\n";
-        std::cout << "13. Exit\n";
-        std::cout << "Select an option: ";
-        std::cin >> choice;
+    // 2. Initialize your database just like before!
+    Database* db = Database::getInstance();
+    std::cout << "Database connection ready for web traffic!" << std::endl;
+    // --- HOME PAGE (FRONTEND) ---
+    CROW_ROUTE(app, "/")([](){
+        std::ifstream file("index.html");
+        std::string html((std::istreambuf_iterator<char>(file)), std::istreambuf_iterator<char>());
+        
+        crow::response res(html);
+        res.set_header("Content-Type", "text/html");
+        return res;
+    });
 
-        if (std::cin.fail()) {
-            std::cin.clear(); std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-            continue;
+    // --- YOUR FIRST WEB ROUTE (API ENDPOINT) ---
+    // When the browser goes to /api/status, it runs this code!
+    CROW_ROUTE(app, "/api/status")([](){
+        // Create a JSON response to send to the browser
+        crow::json::wvalue response;
+        response["status"] = "success";
+        response["message"] = "The Event Management API is online!";
+        return response;
+    });
+
+    // --- GET ALL EVENTS (READ) ---
+    CROW_ROUTE(app, "/api/events")([db](){
+        crow::json::wvalue response;
+        try {
+            sql::Connection* conn = db->getConnection();
+            std::unique_ptr<sql::PreparedStatement> pstmt(conn->prepareStatement(
+                "SELECT event_id, event_name, event_date FROM Events"
+            ));
+            std::unique_ptr<sql::ResultSet> res(pstmt->executeQuery());
+
+            int i = 0;
+            while (res->next()) {
+                response[i]["id"] = res->getInt("event_id");
+                response[i]["name"] = res->getString("event_name");
+                response[i]["date"] = res->getString("event_date");
+                i++;
+            }
+        } catch (sql::SQLException &e) {
+            response["error"] = e.what();
         }
+        return response;
+    });
 
-        switch (choice) {
-            case 1: 
-                Event::createEvent();
-                break;
-            case 2:
-                Event::viewAllEvents();
-                break;
-            case 3: {
-                int sub = 0; 
-                std::cout << "\n1. Book Vendor\n2. Book Equipment\n3. Assign Staff\nSelect: "; 
-                std::cin >> sub;
-                if (sub == 1) Booking::bookVendor(); 
-                else if (sub == 2) Booking::bookEquipment();
-                else if (sub == 3) Booking::assignStaff();
-                break;
-            }
-            
-            case 4: {
-                int sub = 0; 
-                std::cout << "\n1. Record Event Revenue\n2. Generate Financial Report\nSelect: "; 
-                std::cin >> sub;
-                if (sub == 1) Analytics::recordRevenue(); 
-                else if (sub == 2) Analytics::generateFinancialReport();
-                break;
-            }
+    // 3. Start the server on port 8080!
+    app.port(8080).multithreaded().run();
 
-            case 6: {
-                int sub = 0; std::cout << "\n1. Add Venue\n2. View Venues\nSelect: "; std::cin >> sub;
-                if (sub == 1) Venue::addVenue(); else if (sub == 2) Venue::viewAllVenues();
-                break;
-            }
-            case 7: {
-                int sub = 0; std::cout << "\n1. Add Vendor\n2. View Vendors\nSelect: "; std::cin >> sub;
-                if (sub == 1) Vendor::addVendor(); else if (sub == 2) Vendor::viewAllVendors();
-                break;
-            }
-            case 8: {
-                int sub = 0; std::cout << "\n1. Add Equipment\n2. View Equipment\nSelect: "; std::cin >> sub;
-                if (sub == 1) Equipment::addEquipment(); else if (sub == 2) Equipment::viewAllEquipment();
-                break;
-            }
-            case 9: {
-                int sub = 0; std::cout << "\n1. Add Staff\n2. View Staff\nSelect: "; std::cin >> sub;
-                if (sub == 1) Staff::addStaff(); else if (sub == 2) Staff::viewAllStaff();
-                break;
-            }
-            case 11:
-                BudgetCalculator::runCalculator();
-                break;
-            case 13:
-                std::cout << "Shutting down system...\n";
-                break;
-            default:
-                std::cout << "Feature in development. Please select a valid option.\n";
-        }
-    }
     return 0;
 }

@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = 
+CXX_INCLUDES = -I/workspaces/projects/Crow/include
 
-CXX_FLAGS = -std=gnu++17
+CXX_FLAGS = 
 
