@@ -4,48 +4,112 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Event Logistics Dashboard</title>
-    <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f0f2f5; padding: 40px; color: #333; }
-        h1 { text-align: center; color: #1a73e8; margin-bottom: 30px; }
-        table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-        th, td { padding: 15px 20px; text-align: left; border-bottom: 1px solid #ddd; }
-        th { background-color: #1a73e8; color: white; text-transform: uppercase; letter-spacing: 0.05em; font-size: 14px; }
-        tr:hover { background-color: #f1f3f4; }
-    </style>
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-    <h1>Event Analytics Dashboard</h1>
-    <table>
-        <thead>
-            <tr>
-                <th>Event ID</th>
-                <th>Event Name</th>
-                <th>Event Date</th>
-            </tr>
-        </thead>
-        <tbody id="event-table-body">
-            <!-- The C++ Backend data will be injected here automatically! -->
-        </tbody>
-    </table>
+    <!-- LEFT SIDE: The Navigation Bar -->
+    <div class="sidebar">
+        <h2>Event Manager</h2>
+        <button onclick="showSection('home-section')">🏠 Home</button>
+        <button onclick="showSection('events-section')">📅 Events</button>
+        <button onclick="showSection('venues-section')">🏢 Venues</button>
+        <button onclick="showSection('vendors-section')">🤝 Vendors</button>
+        <button onclick="showSection('equipment-section')">📦 Equipment</button>
+        <button onclick="showSection('staff-section')">👥 Staff</button>
+        <button onclick="showSection('budget-section')">💰 Budget & Reports</button>
+    </div>
 
-    <script>
-        // 1. Silently reach out to the C++ server
-        fetch('/api/events')
-            .then(response => response.json()) // 2. Convert the response to JSON
-            .then(data => {
-                const tableBody = document.getElementById('event-table-body');
-                
-                // 3. Loop through the database results and build the HTML table rows!
-                data.forEach(event => {
-                    const row = `<tr>
-                        <td>${event.id}</td>
-                        <td><strong>${event.name}</strong></td>
-                        <td>${event.date}</td>
-                    </tr>`;
-                    tableBody.innerHTML += row;
-                });
-            })
-            .catch(error => console.error('Error fetching from C++ API:', error));
-    </script>
+    <!-- RIGHT SIDE: The Main Content Area -->
+    <div class="main-content">
+
+        <!-- 1. HOME SECTION -->
+        <div id="home-section" class="section active">
+            <h1>Welcome to the Event Logistics Dashboard</h1>
+            <p>Select a module on the left to manage your database.</p>
+        </div>
+
+        <!-- 2. EVENTS -->
+        <div id="events-section" class="section">
+            <h1>Event Management</h1>
+            <div class="form-card">
+                <input type="text" id="eventName" placeholder="Event Name">
+                <input type="date" id="eventDate">
+                <button onclick="createEvent()">Add Event</button>
+            </div>
+            <table>
+                <thead><tr><th>ID</th><th>Name</th><th>Date</th></tr></thead>
+                <tbody id="event-table-body"></tbody>
+            </table>
+        </div>
+
+        <!-- 3. VENUES -->
+        <div id="venues-section" class="section">
+            <h1>Venue Management</h1>
+            <div class="form-card">
+                <input type="text" id="venueName" placeholder="Venue Name">
+                <input type="number" id="venueCapacity" placeholder="Capacity">
+                <button onclick="createVenue()">Add Venue</button>
+            </div>
+            <table>
+                <thead><tr><th>ID</th><th>Venue Name</th><th>Capacity</th></tr></thead>
+                <tbody id="venue-table-body"></tbody>
+            </table>
+        </div>
+
+        <!-- 4. VENDORS -->
+        <div id="vendors-section" class="section">
+            <h1>Vendor Management</h1>
+            <div class="form-card">
+                <input type="text" id="vendorName" placeholder="Vendor Name">
+                <input type="text" id="vendorService" placeholder="Service (e.g. Catering)">
+                <button onclick="createVendor()">Add Vendor</button>
+            </div>
+            <table>
+                <thead><tr><th>ID</th><th>Vendor Name</th><th>Service</th></tr></thead>
+                <tbody id="vendor-table-body"></tbody>
+            </table>
+        </div>
+
+        <!-- 5. EQUIPMENT -->
+        <div id="equipment-section" class="section">
+            <h1>Equipment Management</h1>
+            <div class="form-card">
+                <input type="text" id="equipName" placeholder="Equipment Name">
+                <input type="number" id="equipQuantity" placeholder="Quantity">
+                <button onclick="createEquipment()">Add Equipment</button>
+            </div>
+            <table>
+                <thead><tr><th>ID</th><th>Item Name</th><th>Quantity</th></tr></thead>
+                <tbody id="equipment-table-body"></tbody>
+            </table>
+        </div>
+
+        <!-- 6. STAFF -->
+        <div id="staff-section" class="section">
+            <h1>Staff Management</h1>
+            <div class="form-card">
+                <input type="text" id="staffName" placeholder="Staff Name">
+                <input type="text" id="staffRole" placeholder="Role (e.g. Security)">
+                <button onclick="createStaff()">Add Staff</button>
+            </div>
+            <table>
+                <thead><tr><th>ID</th><th>Name</th><th>Role</th></tr></thead>
+                <tbody id="staff-table-body"></tbody>
+            </table>
+        </div>
+
+        <!-- 7. BUDGET & REPORTS -->
+        <div id="budget-section" class="section">
+            <h1>Budget Calculator & Analytics</h1>
+            <div class="form-card">
+                <h3>Run Cost Analysis</h3>
+                <button onclick="calculateBudget()">Generate Financial Report</button>
+                <p id="budget-output" style="margin-top: 15px; font-weight: bold;"></p>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="/script.js"></script>
 </body>
 </html>

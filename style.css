@@ -1,0 +1,47 @@
+/* Overall Page Setup */
+body { 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    background-color: #f0f2f5; 
+    margin: 0; 
+    display: flex; 
+    height: 100vh;
+    color: #333;
+}
+
+/* The Left Sidebar */
+.sidebar {
+    width: 250px;
+    background-color: #1a73e8;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+.sidebar h2 { text-align: center; margin: 20px 0 30px 0; font-size: 24px; }
+.sidebar button {
+    background: none; color: white; border: none;
+    padding: 15px 20px; text-align: left; font-size: 16px;
+    cursor: pointer; transition: 0.2s; border-bottom: 1px solid #1557b0;
+}
+.sidebar button:hover { background-color: #1152a3; }
+
+/* The Right Main Content Area */
+.main-content {
+    flex: 1;
+    padding: 40px;
+    overflow-y: auto;
+}
+
+/* Magic Section Hiding/Showing logic */
+.section { display: none; }
+.section.active { display: block; } /* Only the section with 'active' is shown */
+
+/* Forms & Tables */
+.form-card { background: white; padding: 20px; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+.form-card input { padding: 8px; margin-right: 10px; border: 1px solid #ccc; border-radius: 4px; }
+.form-card button { padding: 9px 15px; background: #1a73e8; color: white; border: none; border-radius: 4px; cursor: pointer; }
+.form-card button:hover { background: #1152a3; }
+
+table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+th, td { padding: 15px 20px; text-align: left; border-bottom: 1px solid #ddd; }
+th { background-color: #1a73e8; color: white; text-transform: uppercase; font-size: 14px; }
+tr:hover { background-color: #f1f3f4; }
